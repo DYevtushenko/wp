@@ -6,26 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <link rel="shortcut icon" href="img/favicon.png">
+<!--    <link rel="shortcut icon" href="--><?php //echo THEME_URL; ?><!--img/favicon.png">-->
 
-    <title>FlatLab Frontend | Home</title>
+    <title><?php bloginfo('name').' '. wp_title(); ?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/theme.css" rel="stylesheet">
-    <link href="css/bootstrap-reset.css" rel="stylesheet">
-    <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link href="assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
-    <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="assets/revolution_slider/css/rs-style.css" media="screen">
-    <link rel="stylesheet" href="assets/revolution_slider/rs-plugin/css/settings.css" media="screen">
-
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet" />
+<?php wp_head(); ?>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +29,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="fa fa-bars"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Flat<span>Lab</span></a>
+                <a class="navbar-brand" href="index.html"><img src="<?php the_field('logo','options'); ?>"></a>
             </div>
             <div class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav">
@@ -63,15 +49,15 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li class="dropdown language">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" src="img/flags/us.png">
+                            <img alt="" src="<?php echo THEME_URL; ?>img/flags/us.png">
                             <span class="username">US</span>
                             <b class=" fa fa-angle-down"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><img alt="" src="img/flags/es.png"> Spanish</a></li>
-                            <li><a href="#"><img alt="" src="img/flags/de.png"> German</a></li>
-                            <li><a href="#"><img alt="" src="img/flags/ru.png"> Russian</a></li>
-                            <li><a href="#"><img alt="" src="img/flags/fr.png"> French</a></li>
+                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/es.png"> Spanish</a></li>
+                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/de.png"> German</a></li>
+                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/ru.png"> Russian</a></li>
+                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/fr.png"> French</a></li>
                         </ul>
                     </li>
                     <li><input type="text" placeholder=" Search" class="form-control search"></li>
