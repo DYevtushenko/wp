@@ -26,5 +26,38 @@ function theme_styles () {
     wp_enqueue_script('revulation', THEME_URL.'js/revulation-slide.js', array('jquery'), null, true);
     }
 
+add_action( 'init', 'theme_setup' );
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
-add_theme_support( 'post-thumbnails' );
+
+function theme_setup()
+{
+    add_theme_support('post-thumbnails');
+    add_theme_support('menus');
+
+    register_nav_menus(
+        array(
+            'head_menu' => 'Шапка сайта',
+            '404_menu' => 'Меню 404'
+        )
+    );
+
+    register_sidebar( [
+        'id'          => 'sidebar_blog',
+        'name'        => 'Blog sidebar',
+        'description' => '',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>'
+    ] );
+}
+
+function the_placeholder () {
+    echo "<img src='".THEME_URL."img/placeholder.png'>" ;
+}
+
+function the_404_img () {
+    echo "<img src='".THEME_URL."img/404.jpg'>" ;
+}
+
+

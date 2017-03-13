@@ -270,7 +270,10 @@ ul {
 
 /*pagination*/
 
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+.pagination span.current,
+.pagination span.current:hover,
+.pagination  span.current:focus
+{
     background-color: #FF6C60;
     border-color: #FF6C60;
     color: #FFFFFF;

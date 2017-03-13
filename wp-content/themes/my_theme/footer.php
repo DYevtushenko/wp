@@ -11,14 +11,7 @@
                     <p>Email: <?php the_field('e-mail','options') ?></p>
                 </address>
             </div>
-            <div class="col-lg-5 col-sm-5">
-                <h1>latest tweet</h1>
-                <div class="tweet-box">
-                    <i class="fa fa-twitter"></i>
-                    <em>Please follow <a href="javascript:;">@nettus</a> for all future updates of us! <a
-                            href="javascript:;">twitter.com/vectorlab</a></em>
-                </div>
-            </div>
+
             <div class="col-lg-3 col-sm-3 col-lg-offset-1">
                 <h1>stay connected</h1>
                 <ul class="social-link-footer list-unstyled">
@@ -26,13 +19,13 @@
 
                     <?php
                     if( have_rows('social','options') ):
-
-                        while ( have_rows('social','options') ) :
+                        while ( have_rows('social','options') ):
                             the_row();
                             ?>
-                            <li><a href="<?php the_sub_field('url'); ?>"><i class="fa <?php the_sub_field('icon'); ?>"></i></a></li>
-                            <?php
 
+                            <li><a href="<?php the_sub_field('url'); ?>"><i class="fa <?php the_sub_field('icon'); ?>"></i></a></li>
+
+                            <?php
                         endwhile;
                     endif;
                     ?>

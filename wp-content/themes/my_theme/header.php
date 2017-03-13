@@ -31,8 +31,26 @@
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="<?php the_field('logo','options'); ?>"></a>
             </div>
-            <div class="navbar-collapse collapse ">
-                <ul class="nav navbar-nav">
+            <!--<div class="navbar-collapse collapse ">-->
+                <?php wp_nav_menu( [
+                    'theme_location'  => 'head_menu',
+                    'container'       => 'div',
+                    'container_class' => 'navbar-collapse collapse',
+                    'container_id'    => '',
+                    'menu_class'      => 'nav navbar-nav',
+                    'menu_id'         => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => '',
+                ] ); ?>
+
+                <!--<ul class="nav navbar-nav">
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Service</a></li>
@@ -49,20 +67,20 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li class="dropdown language">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" src="<?php echo THEME_URL; ?>img/flags/us.png">
+                            <img alt="" src="<?php /*echo THEME_URL; */?>img/flags/us.png">
                             <span class="username">US</span>
                             <b class=" fa fa-angle-down"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/es.png"> Spanish</a></li>
-                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/de.png"> German</a></li>
-                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/ru.png"> Russian</a></li>
-                            <li><a href="#"><img alt="" src="<?php echo THEME_URL; ?>img/flags/fr.png"> French</a></li>
+                            <li><a href="#"><img alt="" src="<?php /*echo THEME_URL; */?>img/flags/es.png"> Spanish</a></li>
+                            <li><a href="#"><img alt="" src="<?php /*echo THEME_URL; */?>img/flags/de.png"> German</a></li>
+                            <li><a href="#"><img alt="" src="<?php /*echo THEME_URL; */?>img/flags/ru.png"> Russian</a></li>
+                            <li><a href="#"><img alt="" src="<?php /*echo THEME_URL; */?>img/flags/fr.png"> French</a></li>
                         </ul>
                     </li>
                     <li><input type="text" placeholder=" Search" class="form-control search"></li>
-                </ul>
-            </div>
+                </ul>-->
+<!--            </div>-->
         </div>
     </div>
 </header>
